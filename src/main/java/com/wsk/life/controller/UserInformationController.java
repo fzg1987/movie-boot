@@ -668,7 +668,7 @@ public class UserInformationController extends AsideController {
             int id = getUserInformationId(phone);
             if (id == -1) return false;
             String psw = userPasswordService.getPassword(id).getPassword();
-            password = Tool.getInstance().getMD5(password);
+//            password = Tool.getInstance().getMD5(password);
             if (phone.equals("1") || password.equals(psw)) {
                 result = true;
                 request.getSession().setAttribute("uid", id);
